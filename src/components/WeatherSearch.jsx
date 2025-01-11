@@ -8,8 +8,9 @@ const WeatherSearch = () => {
   const [weatherData, setWeatherData] = useState(null); // Datos del clima
   const [error, setError] = useState(null); // Gestión de errores
 
-  const LOCATIONIQ_API_KEY = "pk.976ccfe344e95029e0ba0e6f5c3c1206";
-  const OPENWEATHER_API_KEY = "c2cbdb426ccc4e92669660cc3aece85a";
+  // Claves de API obtener del .env
+  const LOCATIONIQ_API_KEY = import.meta.env.VITE_LOCATIONIQ_API_KEY;
+const OPENWEATHER_API_KEY = import.meta.env.VITE_OPENWEATHER_API_KEY;
   const WEATHER_URL = "https://api.openweathermap.org/data/2.5/weather";
 
   // Función para autocompletar usando LocationIQ
